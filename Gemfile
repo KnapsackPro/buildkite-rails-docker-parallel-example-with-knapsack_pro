@@ -1,5 +1,5 @@
 source 'https://rubygems.org/'
 
 gem 'rspec'
-gem 'knapsack'
+gem 'knapsack_pro'
 gem 'puma'
