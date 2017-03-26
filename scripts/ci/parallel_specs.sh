@@ -4,4 +4,4 @@ set -euo pipefail
 
 rake db:reset
 
-rake knapsack:rspec
+rake knapsack_pro:queue:rspec
