@@ -5,8 +5,8 @@ require 'knapsack_pro'
 # uncomment when you use VCR
 #require 'vcr'
 #VCR.configure do |config|
-	#config.hook_into :webmock # or :fakeweb
-	#config.ignore_hosts('localhost', '127.0.0.1', '0.0.0.0', 'api.knapsackpro.com')
+  #config.hook_into :webmock # or :fakeweb
+  #config.ignore_hosts('localhost', '127.0.0.1', '0.0.0.0', 'api.knapsackpro.com')
 #end
 
 # add below when you hook into webmock
