@@ -30,6 +30,15 @@ services:
       BUILDKITE_REPO:
       BUILDKITE_BUILD_ID:
       BUILDKITE_BUILD_NUMBER:
+      # if you want to configure Knapsack Pro with other ENVs
+      # you need to add them here to pass values to docker
+      KNAPSACK_PRO_TEST_SUITE_TOKEN_RSPEC:
+      # For instance you can pass KNAPSACK_PRO_FIXED_QUEUE_SPLIT
+      # it should be defined to true if you use retry failed buildkite agent feature.
+      # Thanks to that you will be able to retry exactly the same tests as they were
+      # run on the failed agent.
+      # https://github.com/KnapsackPro/knapsack_pro-ruby#knapsack_pro_fixed_queue_split-remember-queue-split-on-retry-ci-node
+      # KNAPSACK_PRO_FIXED_QUEUE_SPLIT:
     ports:
       - "5000:5000"
     entrypoint: wait-for-it.sh db:5432 -s -- wait-for-it.sh redis:6379 -s -- wait-for-it.sh memcache:11211 -s --
